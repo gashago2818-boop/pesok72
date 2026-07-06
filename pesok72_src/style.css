@@ -3,9 +3,9 @@
   html{scroll-behavior:smooth}
   body{margin:0;background:#F4EFE7;color:#1B1915;font-family:'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
   ::selection{background:#C9812B;color:#fff}
-  #top,#catalog,#calc,#how,#faq,#contacts{scroll-margin-top:96px}
+  #top,#catalog,#how,#faq,#contacts{scroll-margin-top:96px}
   @media (max-width:860px){
-    #top,#catalog,#calc,#how,#faq,#contacts{scroll-margin-top:76px}
+    #top,#catalog,#how,#faq,#contacts{scroll-margin-top:76px}
   }
   @keyframes grain{0%,100%{opacity:.04}50%{opacity:.06}}
   .m-grain{animation:grain 3s ease-in-out infinite}
@@ -58,7 +58,6 @@
     .m-hero-img{aspect-ratio:16/10 !important;order:-1}
     .m-metrics{gap:26px !important}
     .m-grid4{grid-template-columns:1fr 1fr !important}
-    .m-calc{grid-template-columns:1fr !important;padding:30px !important;gap:32px !important}
     .m-2{grid-template-columns:1fr !important;gap:30px !important}
     .m-footer{grid-template-columns:1fr 1fr !important}
     .m-foot{padding:40px 24px 24px !important}
@@ -71,11 +70,9 @@
   @media (max-width:520px){
     .m-grid4{grid-template-columns:1fr !important}
     .m-footer{grid-template-columns:1fr !important;gap:26px !important}
-    .m-pair{grid-template-columns:1fr !important;gap:24px !important}
     .m-steps{grid-template-columns:1fr !important}
     .m-hero h1{font-size:33px !important}
     .m-hero-cta{flex-wrap:wrap}
-    .m-calc{padding:24px !important}
     .m-h2{font-size:26px !important}
     .m-brandsub{display:none}
   }
