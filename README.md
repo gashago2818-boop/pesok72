@@ -1,1 +1,1 @@
-https://github.com/gashago2818-boop/pesok72.git
+https://gashago2818-boop.github.io/pesok72/
