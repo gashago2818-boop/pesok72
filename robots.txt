@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gashago2818-boop.github.io/pesok72/sitemap.xml
