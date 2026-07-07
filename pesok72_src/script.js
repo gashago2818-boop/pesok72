@@ -2,13 +2,21 @@
 class Component extends DCLogic {
   state = { openFaq: 0 };
 
+  // Photos: Wikimedia Commons, CC BY / CC BY-SA (attribution required) or CC0.
+  // crupno.jpg    - "A heap of sharp sand" by Confidence24, CC BY-SA 4.0
+  // sredne.jpg    - "Heap of Fine Construction Sand" by Paul The Writer, CC0
+  // tehno.jpg     - "Pile of Sand for Building in Anambra State" by Johnnybam, CC BY-SA 4.0
+  // otsypka.jpg   - "Sand and Gravel Extraction" by Anne Burgess (geograph.org.uk), CC BY-SA 2.0
+  // suhaya.jpg    - "Another pile of Sand" by Bill Nicholls (geograph.org.uk), CC BY-SA 2.0
+  // shcheben.jpg  - "Sorted gravel pile..." by James St. John, CC BY 2.0
+  // about.jpg     - "Sand and gravel pit" by Roger W Haworth (geograph.org.uk), CC BY-SA 2.0
   products = [
-    { name: 'Крупнозернистый', desc: 'Плотный, с крупной фракцией. Для бетона, дорожных работ и высоких нагрузок.', swatch: 'linear-gradient(135deg,#D9B98A,#B98A4E)' },
-    { name: 'Среднезернистый', desc: 'Универсальный вариант для кладки, стяжки и общестроительных работ.', swatch: 'linear-gradient(135deg,#E0CBA0,#C2A160)' },
-    { name: 'Технологический', desc: 'Для производственных нужд и технических площадок.', swatch: 'linear-gradient(135deg,#E6D3AE,#C9A96A)' },
-    { name: 'Для отсыпки', desc: 'Отсыпка участков, дорог и оснований под фундамент.', swatch: 'linear-gradient(135deg,#EAD9B8,#CDAE72)' },
-    { name: 'Сухой добычи', desc: 'Минимальная влажность, удобен для хранения и точного дозирования.', swatch: 'linear-gradient(135deg,#DDC192,#B98A4E)' },
-    { name: 'Щебень', desc: 'Разные фракции для бетона, дренажа и отсыпки.', swatch: 'linear-gradient(135deg,#B9B2A6,#8A8377)' },
+    { name: 'Крупнозернистый', desc: 'Плотный, с крупной фракцией. Для бетона, дорожных работ и высоких нагрузок.', img: 'img/crupno.jpg' },
+    { name: 'Среднезернистый', desc: 'Универсальный вариант для кладки, стяжки и общестроительных работ.', img: 'img/sredne.jpg' },
+    { name: 'Технологический', desc: 'Для производственных нужд и технических площадок.', img: 'img/tehno.jpg' },
+    { name: 'Для отсыпки', desc: 'Отсыпка участков, дорог и оснований под фундамент.', img: 'img/otsypka.jpg' },
+    { name: 'Сухой добычи', desc: 'Минимальная влажность, удобен для хранения и точного дозирования.', img: 'img/suhaya.jpg' },
+    { name: 'Щебень', desc: 'Разные фракции для бетона, дренажа и отсыпки.', img: 'img/shcheben.jpg' },
   ];
 
   advantages = [

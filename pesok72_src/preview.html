@@ -305,8 +305,8 @@
     <div class="m-grid4" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
       <sc-for list="{{ products }}" as="p" hint-placeholder-count="6">
         <div class="reveal m-card" style="background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:18px;padding:22px;display:flex;flex-direction:column">
-          <div style="height:96px;border-radius:12px;margin-bottom:18px;background:{{ p.swatch }};position:relative;overflow:hidden">
-            <div class="m-grain" style="position:absolute;inset:0;background:repeating-linear-gradient(35deg,rgba(255,255,255,.12) 0 1px,transparent 1px 7px)"></div>
+          <div style="height:120px;border-radius:12px;margin-bottom:18px;position:relative;overflow:hidden">
+            <img src="{{ p.img }}" alt="{{ p.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
           </div>
           <div style="font-size:18px;font-weight:700;letter-spacing:-.01em">{{ p.name }}</div>
           <div style="font-size:13px;color:#8A8377;margin:6px 0 16px;line-height:1.45;flex:1">{{ p.desc }}</div>
@@ -351,9 +351,8 @@
 
   <!-- ABOUT -->
   <section class="m-2" style="padding:70px 0 20px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center">
-    <div class="reveal" style="aspect-ratio:5/4;border-radius:20px;background:linear-gradient(150deg,#D9C29A,#B58A4F);position:relative;overflow:hidden">
-      <div class="m-grain" style="position:absolute;inset:0;background:repeating-linear-gradient(40deg,rgba(255,255,255,.06) 0 2px,transparent 2px 10px)"></div>
-      <div style="position:absolute;bottom:0;left:0;right:0;height:38%;background:#8A5A1E;clip-path:polygon(0 60%,30% 30%,60% 52%,100% 24%,100% 100%,0 100%)"></div>
+    <div class="reveal" style="aspect-ratio:5/4;border-radius:20px;background:#8A5A1E;position:relative;overflow:hidden">
+      <img src="img/about.jpg" alt="Карьер Песок72" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
     </div>
     <div class="reveal">
       <div style="font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#C9812B;margin-bottom:10px">О компании</div>
@@ -458,13 +457,21 @@
 class Component extends DCLogic {
   state = { openFaq: 0 };
 
+  // Photos: Wikimedia Commons, CC BY / CC BY-SA (attribution required) or CC0.
+  // crupno.jpg    - "A heap of sharp sand" by Confidence24, CC BY-SA 4.0
+  // sredne.jpg    - "Heap of Fine Construction Sand" by Paul The Writer, CC0
+  // tehno.jpg     - "Pile of Sand for Building in Anambra State" by Johnnybam, CC BY-SA 4.0
+  // otsypka.jpg   - "Sand and Gravel Extraction" by Anne Burgess (geograph.org.uk), CC BY-SA 2.0
+  // suhaya.jpg    - "Another pile of Sand" by Bill Nicholls (geograph.org.uk), CC BY-SA 2.0
+  // shcheben.jpg  - "Sorted gravel pile..." by James St. John, CC BY 2.0
+  // about.jpg     - "Sand and gravel pit" by Roger W Haworth (geograph.org.uk), CC BY-SA 2.0
   products = [
-    { name: 'Крупнозернистый', desc: 'Плотный, с крупной фракцией. Для бетона, дорожных работ и высоких нагрузок.', swatch: 'linear-gradient(135deg,#D9B98A,#B98A4E)' },
-    { name: 'Среднезернистый', desc: 'Универсальный вариант для кладки, стяжки и общестроительных работ.', swatch: 'linear-gradient(135deg,#E0CBA0,#C2A160)' },
-    { name: 'Технологический', desc: 'Для производственных нужд и технических площадок.', swatch: 'linear-gradient(135deg,#E6D3AE,#C9A96A)' },
-    { name: 'Для отсыпки', desc: 'Отсыпка участков, дорог и оснований под фундамент.', swatch: 'linear-gradient(135deg,#EAD9B8,#CDAE72)' },
-    { name: 'Сухой добычи', desc: 'Минимальная влажность, удобен для хранения и точного дозирования.', swatch: 'linear-gradient(135deg,#DDC192,#B98A4E)' },
-    { name: 'Щебень', desc: 'Разные фракции для бетона, дренажа и отсыпки.', swatch: 'linear-gradient(135deg,#B9B2A6,#8A8377)' },
+    { name: 'Крупнозернистый', desc: 'Плотный, с крупной фракцией. Для бетона, дорожных работ и высоких нагрузок.', img: 'img/crupno.jpg' },
+    { name: 'Среднезернистый', desc: 'Универсальный вариант для кладки, стяжки и общестроительных работ.', img: 'img/sredne.jpg' },
+    { name: 'Технологический', desc: 'Для производственных нужд и технических площадок.', img: 'img/tehno.jpg' },
+    { name: 'Для отсыпки', desc: 'Отсыпка участков, дорог и оснований под фундамент.', img: 'img/otsypka.jpg' },
+    { name: 'Сухой добычи', desc: 'Минимальная влажность, удобен для хранения и точного дозирования.', img: 'img/suhaya.jpg' },
+    { name: 'Щебень', desc: 'Разные фракции для бетона, дренажа и отсыпки.', img: 'img/shcheben.jpg' },
   ];
 
   advantages = [
