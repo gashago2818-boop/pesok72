@@ -67,4 +67,18 @@
     var header = document.querySelector('.m-header');
     if (header) header.classList.toggle('is-scrolled', scrolled);
   }, { passive: true });
+
+  var banner = document.getElementById('cookie-banner');
+  if (banner) {
+    if (!localStorage.getItem('cookieConsent')) {
+      banner.style.display = 'block';
+    }
+    var acceptBtn = document.getElementById('cookie-accept');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieConsent', '1');
+        banner.style.display = 'none';
+      });
+    }
+  }
 })();
